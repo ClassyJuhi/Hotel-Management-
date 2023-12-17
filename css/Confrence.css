@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.maincontainer{
+    padding: 0 50px 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+#introImg{
+    height: 400px;
+}
+h2, h1{
+    margin: 10px 0;
+}
+button{
+    width: 120px;
+    display: inline-block;
+    align-self: center;
+}
+.image{
+    margin-top: 20px;
+}
+.imageGallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.imageGallery img{
+    width: 570px;
+    height: 350px;
+} 
+
+@media(max-width:975px){
+    #introImg{
+        width: 98vw;
+    }
+    .imageGallery img{
+        width: 98vw;
+        box-sizing: border-box;
+    }
+    .imageGallery{
+        justify-content: center;
+    }
+}

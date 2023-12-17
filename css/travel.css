@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/taxi-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.maincontainer{
+    margin-top: 100px;
+    max-width: 500px;
+    padding: 50px;
+    background-color: #F9EBEA;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}

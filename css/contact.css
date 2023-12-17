@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/assets/phone.jpeg);
+    background-size: cover;
+}
+.maincontainer{
+    margin: 50px 0;
+    max-width: 500px;
+    padding: 50px;
+    background-color: #F9EBEA;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+ul{
+    margin: 20px 0;
+}
+li{
+    text-align: left;
+    font-size: 18px;
+}
+button{
+    margin: 20px 0 0 0;
+}
+li a{
+    color: blue;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/book.css">
+</head>
+
+<body>
+	<div class="maincontainer">
+		<h1>Book Now</h1>
+		<h2>Personal Details : </h2>
+		<form action="">
+			<div class="inputBox">
+				<label for="name">Name : </label>
+				<input type="text" name="" id="name">
+			</div>
+			<br>
+			<div class="inputBox">
+				<label for="email">Email : </label>
+				<input type="email" name="" id="email">
+			</div>
+			<br>
+			<div class="inputBox">
+				<label for="number">Phone : </label>
+				<input type="number" name="" id="number">
+			</div>
+
+			<h2>Booking Details</h2>
+			<div class="inputBox">
+				<label for="rooms">Rooms:</label>
+				<select name="" id="rooms">
+					<option value="Executive">Executive Room</option>
+					<option value="Family">Family Room</option>
+					<option value="Suite">Suite</option>
+				</select>
+			</div>
+			<br>
+			<div class="inputBox">
+				<label for="guests">Count:</label>
+				<select name="" id="guests">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<h3>Select a payment option : </h3>
+				<br>
+				<label for="startDate">Check-in Date:</label>
+				<input type="date" id="startDate" name="startDate">
+				<br>
+				<label for="endDate">Check-out Date:</label>
+				<input type="date" id="endDate" name="endDate">
+				<br>
+
+			<input type="submit" value="Submit">
+			<h3>total:</h3>
+			<div id="totalAmount">10000</div>
+			<button><a href="/html/home.html">Home</a></button>
+		</form>
+		<button id="pay-now-button">Pay Now</button>
+
+  <div id="payment-form-container" style="display: none;">
+    <form id="payment-form">
+      <div id="card-element"></div>
+      <button id="submit-button">Submit Payment</button>
+      <div id="error-message"></div>
+    </form>
+  </div>
+
+	</div>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="/js/book.js"></script>
+</body>
+
+</html> 

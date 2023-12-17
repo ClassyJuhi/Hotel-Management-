@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/assets/bookbg);
+    background-size: cover;
+    background-position: bottom;
+}
+.maincontainer{
+    margin: 50px 0;
+    max-width: 400px;
+    padding: 50px;
+    background-color: #F9EBEA;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+input{
+    width: 200px;
+    padding: 5px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid black;
+}
+select{
+    width: 200px;
+    padding: 5px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid black;
+}
+.radioBox{
+    width: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+h2, h3{
+    margin: 5px 0;
+}
+/* styles.css */
+#payment-form-container {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  

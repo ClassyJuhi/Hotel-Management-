@@ -1,0 +1,42 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/assets/about\ bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maincontainer{
+    margin: 0 5px;
+    max-width: 425px;
+    background-color: #F9EBEA;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+h2{
+    margin: 15px 0;
+}
+p{
+    font-size: 18px;
+}
+button{
+    padding: 12px 25px;
+    margin: 25px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    background: linear-gradient(to right top, #fec86d, #fc7064);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button:hover{
+    box-shadow: 0 13px 20px 0 rgba(0,0,0,.12);
+}

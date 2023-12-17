@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/kidsbg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.maincontainer{
+    margin-top: 100px;
+    max-width: 500px;
+    padding: 50px;
+    background-color: #F9EBEA;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+h2{
+    margin: 10px 0;
+}
+li{
+    text-align: left;
+}
