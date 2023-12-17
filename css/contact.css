@@ -2,7 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/assets/phone.jpeg);
+    background: url(phone.jpeg);
     background-size: cover;
 }
 .maincontainer{
