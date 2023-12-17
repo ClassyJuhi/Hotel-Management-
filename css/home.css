@@ -6,7 +6,7 @@
   width: 100%;
   min-height: calc(100vh - 50px);
   padding-bottom: 5%;
-  background-image: url('assets/home.png');
+  background-image: url(../assets/home.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
