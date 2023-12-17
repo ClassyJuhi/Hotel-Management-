@@ -2,7 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/assets/bookbg);
+    background: url(../assets/bookbg);
     background-size: cover;
     background-position: bottom;
 }

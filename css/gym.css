@@ -3,7 +3,7 @@ body{
      display: flex;
      justify-content: center;
      align-items: center;   
-     background: url(/assets/gymbg.jpeg);
+     background: url(../assets/gymbg.jpeg);
      background-size: contain;
 } 
 .maincontainer{
