@@ -36,60 +36,52 @@ function updateTotalAmount() {
 
 
 
-let payNowButton = document.getElementById('pay-now-button');
-let stripe = Stripe('pk_test_51ONGDvSE6zmm4NaLsZthMEqBD5dSya6vNwvvmrfa33jTBE767rWVWVeoCFthoGu4j7marJv9QRd41ur60Wur6T5S00tPcm67Gk');
-payNowButton.addEventListener('click', function () {
-  paymentFormContainer.style.display = 'block';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+  let stripe = Stripe('pk_test_51ONGDvSE6zmm4NaLsZthMEqBD5dSya6vNwvvmrfa33jTBE767rWVWVeoCFthoGu4j7marJv9QRd41ur60Wur6T5S00tPcm67Gk');
+  let elements = stripe.elements();
+  let cardElement = elements.create('card');
+  cardElement.mount('#card-element');
+
+  let form = document.getElementById('payment-form');
+  let payNowButton = document.getElementById('pay-now-button');
+  let paymentFormContainer = document.getElementById('payment-form-container');
+
+  payNowButton.addEventListener('click', function () {
+    paymentFormContainer.style.display = 'block';
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    stripe.createPaymentMethod({
+      type: 'card',
+      card: cardElement,
+    }).then(handlePaymentMethod);
+  });
+
+  function handlePaymentMethod(result) {
+    if (result.error) {
+      let errorElement = document.getElementById('error-message');
+      errorElement.textContent = result.error.message;
+    } else {
+      let paymentMethodId = result.paymentMethod.id;
+      // In a real-world scenario, send paymentMethodId to your server for further processing
+      alert('Payment successful!'); // Replace with your actual success handling
+    }
+  }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // script.js
-// document.addEventListener('DOMContentLoaded', function () {
-//   let stripe = Stripe('pk_test_51ONGDvSE6zmm4NaLsZthMEqBD5dSya6vNwvvmrfa33jTBE767rWVWVeoCFthoGu4j7marJv9QRd41ur60Wur6T5S00tPcm67Gk');
-//   let elements = stripe.elements();
-//   let cardElement = elements.create('card');
-//   cardElement.mount('#card-element');
-
-//   let form = document.getElementById('payment-form');
-//   let payNowButton = document.getElementById('pay-now-button');
-//   let paymentFormContainer = document.getElementById('payment-form-container');
-
-//   payNowButton.addEventListener('click', function () {
-//     paymentFormContainer.style.display = 'block';
-//   });
-
-//   form.addEventListener('submit', function (event) {
-//     event.preventDefault();
-
-//     stripe.createPaymentMethod({
-//       type: 'card',
-//       card: cardElement,
-//     }).then(handlePaymentMethod);
-//   });
-
-//   function handlePaymentMethod(result) {
-//     if (result.error) {
-//       let errorElement = document.getElementById('error-message');
-//       errorElement.textContent = result.error.message;
-//     } else {
-//       let paymentMethodId = result.paymentMethod.id;
-//       // In a real-world scenario, send paymentMethodId to your server for further processing
-//       alert('Payment successful!'); // Replace with your actual success handling
-//     }
-//   }
-// });
